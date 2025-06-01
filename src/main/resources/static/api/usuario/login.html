@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Prod Alert</title>
+    <link rel="icon" type="image/x-icon" href="/src/main/resources/static/assets/fotos/ICON.ico">
+    <!--importação dos CSS-->
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/login.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/global.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/error.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/sucess.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/responsiveLoginSignup.css">
+</head>
+<body>
+    <a href="/src/main/resources/static/index.html">
+        <img src="/src/main/resources/static/assets/fotos/logo.png" class="logo" alt="">
+    </a>
+    <div class="containerLogar" id="loginContainer">
+        
+        <div class="logar">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Entrar</button>
+                <a href="/src/main/resources/static/api/usuario/signup.html" class="cadastro">Cadastre-se</a>
+                <a href="/src/main/resources/static/api/usuario/RecuperarSenha.html">Esqueceu sua senha?</a>
+            </form>
+           
+        </div>
+        
+        <div class="apresentacao">
+            <h1>OLA!</h1>
+            <p>Seja bem-vindo de volta a ProdAlert</p>
+            <p>Aqui você você evita disperdicio e ajuda o planeta.</p>
+            <p>Faça o login para ter uma experiencia incrivel! </p>
+
+        </div>
+    </div>
+    <!-- Spinner de carregamento -->
+    <div id="loadingSpinner" class="spinner-overlay" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+     <!-- Mensagem de erro sobreposta -->
+     <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+
+    <!-- Mensagem de sucesso sobreposta -->
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+    
+    <script src="/src/main/resources/static/assets/JS/login.js"></script>
+    <script src="/src/main/resources/static/assets/JS/sucess.js"></script>
+    <script src="/src/main/resources/static/assets/JS/error.js"></script>
+    
+</body>
+</html>

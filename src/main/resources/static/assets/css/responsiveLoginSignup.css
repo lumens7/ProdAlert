@@ -1,0 +1,72 @@
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        max-height: 5rem;
+    }
+
+    .containerSignup, .containerLogin {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+        border-radius: 1rem;
+        box-shadow: none;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid var(--quarta);
+    }
+    #signupContainer{
+        flex-direction: column;
+    }
+    #loginContainer{
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao {
+        width: 100%;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 3rem;
+        border-bottom-left-radius: 3rem;
+        padding: 1rem;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--quarta);
+        border-bottom: 1px solid var(--quarta);
+    }
+
+    .apresentacao h1,
+    .apresentacao p {
+        padding: 0;
+        text-align: center;
+    }
+
+    .cadastro, .logar{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #cadastroForm, #loginForm{
+        width: 100%;
+    }
+
+    .tipo-usuario {
+        flex-direction: row;
+        gap: .5rem;
+    }
+
+    .tipo-usuario label {
+        justify-content: end;
+        white-space: nowrap;
+    }
+}

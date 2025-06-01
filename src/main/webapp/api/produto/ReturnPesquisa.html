@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Pesquisa</title>
+    <link rel="icon" type="image/x-icon" href="/assets/fotos/ICON.ico">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/resultadoPesquisa.css">
+    <link rel="stylesheet" href="/assets/css/logout.css">
+    <link rel="stylesheet" href="/assets/css/error.css">
+    <link rel="stylesheet" href="/assets/css/sucess.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+<body>
+    <button id="logoutButton" class="logout-button">Sair</button>
+    <div class="container">
+        <h2 id="title" class="typing-effect" data-text="Resultado Pesquisa de Produtos"></h2>
+        <div class="tabela-wrapper">
+            <table id="resultadosTable">
+                <thead>
+                    <tr>
+                        <th>Nome do <p>Produto</th>
+                        <th>Código de<p> Barras</th>
+                        <th>Data de <p>Contagem</th>
+                        <th>Data de <p>Validade</th>
+                        <th>Quantidade <p>Contada</th>
+                        <th>Usuário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="export-buttons">
+            <button id="exportPdfButton" class="export-button">
+                <img src="/assets/fotos/svg/pdf.svg" alt="Exportar PDF">
+            </button>
+            <button id="exportExeButton" class="export-button">
+                <img src="/assets/fotos/svg/xls.svg" alt="Exportar EXE">
+            </button>
+        </div>
+    </div>
+     <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+
+    <script src="/assets/JS/resultadoPesquisa.js"></script>
+    <script src="/assets/JS/title.js"></script>
+    <script src="/assets/JS/error.js"></script>
+    <script src="/assets/JS/sucess.js"></script>
+    <script src="/assets/JS/auth.js"></script>
+    <script src="/assets/JS/logout.js"></script>
+    <script src="/assets/JS/exportPDF.js"></script>
+    <script src="/assets/JS/exportXLS.js"></script>
+    <script src="/assets/JS/menu.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+
+</body>
+</html>

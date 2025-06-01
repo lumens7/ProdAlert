@@ -1,0 +1,70 @@
+.date-picker {
+    position: relative;
+    width: 100%;
+    z-index: 1000; /* Garante que o calendário fique acima de outros elementos */
+    overflow: visible; /* Garante que o calendário não seja cortado */
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#dataValidade {
+    padding-right: 40px;
+}
+
+/* Ajustes para o calendário do Flatpickr */
+.flatpickr-calendar {
+    width: 320px; /* Largura do calendário */
+    font-size: 14px; /* Tamanho da fonte */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra */
+    overflow: visible; /* Garante que o calendário não seja cortado */
+    z-index: 9999; /* Garante que o calendário fique acima de outros elementos */
+}
+
+.flatpickr-months {
+    position: relative;
+    padding: 10px; /* Espaçamento interno */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9; /* Cor de fundo do cabeçalho */
+    border-bottom: 1px solid #ddd; /* Linha separadora */
+    z-index: 10000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.flatpickr-monthDropdown-months,
+.flatpickr-yearDropdown {
+    z-index: 10001; /* Garante que os seletores de mês/ano fiquem acima de outros elementos */
+    background-color:  var(--background); /* Cor de fundo dos seletores */
+    border: 1px solid #ddd; /* Borda dos seletores */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 5px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.flatpickr-monthDropdown-months:hover,
+.flatpickr-yearDropdown:hover {
+    background-color: #f0f0f0; /* Efeito hover */
+}
+
+.flatpickr-day {
+    height: 36px; /* Altura dos dias */
+    line-height: 36px; /* Centraliza o texto */
+}
+
+.flatpickr-day.selected {
+    background-color: var(--background); /* Cor de fundo para o dia selecionado */
+    border-color:  var(--background);
+}
+
+.flatpickr-day.today {
+    border-color:  var(--background); /* Cor da borda para o dia atual */
+}

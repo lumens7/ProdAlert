@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Dados</title>
+    <link rel="icon" type="image/x-icon" href="/assets/fotos/ICON.ico">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/dados_user.css">
+    <link rel="stylesheet" href="/assets/css/error.css">
+    <link rel="stylesheet" href="/assets/css/sucess.css">
+    <link rel="stylesheet" href="/assets/css/logout.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+<body>
+    <button id="logoutButton" class="logout-button">Sair</button>
+
+    <div class="container">
+        <h2 id="title" class="typing-effect" data-text="Meus Dados"></h2>
+        <div id="dados-usuario" class="dados-usuario">
+        </div>
+        <a href="/api/usuario/RecuperarSenha.html">alterar senha</a>
+    </div>
+
+    <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+
+    <script src="/assets/JS/error.js"></script>
+    <script src="/assets/JS/sucess.js"></script>
+    <script src="/assets/JS/title.js"></script>
+    <script src="/assets/JS/auth.js"></script>
+    <script src="/assets/JS/logout.js"></script>
+    <script src="/assets/JS/dados_user.js"></script>
+    <script src="/assets/JS/menu.js"></script>
+</body>
+</html>

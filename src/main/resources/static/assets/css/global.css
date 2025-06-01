@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    --text: #fff;
+    --text2: #000;
+
+    --background: #081C15;
+    --secundaria: #95D5B2;
+    --terceira: #B7E4C7;
+    --quarta: #52B788;
+}
+.container {
+  color: var(--text2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  flex: 1;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 38rem; 
+  border-radius: 2rem;
+  box-shadow: 0 0 10px var(--background);
+  gap: 0;
+  padding: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 1;
+}
+#title {
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin: 1.5rem 1rem 0;
+  text-align: center;
+  color: var(--secundaria);
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  width: 100%; 
+  padding: 0 1rem; 
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%; 
+    justify-content: flex-start; 
+  }
+  #title {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 450px) {
+  #title {
+      font-size: 1.2rem;
+      margin-top: 5rem;
+      margin: 2rem 0.5rem 0; 
+  }
+}

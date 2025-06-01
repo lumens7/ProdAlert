@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de E-mail - Prod Alert</title>
+    <link rel="icon" type="image/x-icon" href="/src/main/resources/static/assets/fotos/ICON.ico">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/verification.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/global.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/error.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/sucess.css">
+</head>
+<body>
+    <img src="/src/main/resources/static/assets/fotos/logo.png" class="logo" alt="">
+    <div class="container">
+        <div class="verification-box">
+            <h2>Verificação de E-mail</h2>
+            <p>Enviamos um código de 6 dígitos para o e-mail <span id="email-display"></span></p>
+            <p>Por favor, insira o código abaixo:</p>
+            
+            <form id="verificationForm">
+                <div class="code-inputs">
+                    <input type="text" maxlength="1" class="code-input" data-index="0">
+                    <input type="text" maxlength="1" class="code-input" data-index="1">
+                    <input type="text" maxlength="1" class="code-input" data-index="2">
+                    <input type="text" maxlength="1" class="code-input" data-index="3">
+                    <input type="text" maxlength="1" class="code-input" data-index="4">
+                    <input type="text" maxlength="1" class="code-input" data-index="5">
+                </div>
+                <input type="hidden" id="full-code">
+                <input type="hidden" id="user-email">
+                
+                <button type="submit" id="verify-button">Verificar</button>
+                <button type="button" id="resend-button">Reenviar Código</button>
+                
+                <p id="countdown">Tempo restante: <span id="timer">05:00</span></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mensagem de erro sobreposta -->
+    <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+    <!-- Mensagem de sucesso sobreposta -->
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+
+    <script src="/src/main/resources/static/assets/JS/verification.js"></script>
+    <script src="/src/main/resources/static/assets/JS/error.js"></script>
+    <script src="/src/main/resources/static/assets/JS/sucess.js"></script>
+</body>
+</html>

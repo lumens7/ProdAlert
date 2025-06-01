@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincular Funcionário</title>
+    <link rel="icon" type="image/x-icon" href="/src/main/resources/static/assets/fotos/ICON.ico">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/global.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/vincular.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/error.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/sucess.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/logout.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/menu.css">
+</head>
+<body>
+    <button id="logoutButton" class="logout-button">Sair</button>
+
+    <div class="container">
+        <h2 id="title" class="typing-effect" data-text="Vincular Funcionário"></h2>
+        <form id="vincularForm">
+            <label for="CPF">CPF do Funcionário:</label>
+            <input type="text" id="CPF" required autocomplete="off" placeholder="Digite o CPF do funcionário">
+            <button type="submit" class="btn-buscar">Buscar Funcionário</button>
+        </form>
+    </div>
+
+    <!-- Overlay de Confirmação -->
+    <div id="confirmOverlay" class="overlay" style="display: none;">
+        <div class="message-box">
+            <div class="close">
+                <button id="closeConfirmButton" class="close-button">X</button>
+            </div>
+            <span id="confirmMessage"></span>
+            <div id="dadosFuncionario" class="dados-funcionario"></div>
+            <div class="confirm-buttons">
+                <button id="confirmAction" class="btn-confirm">Confirmar</button>
+                <button id="cancelAction" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Mensagem de erro sobreposta -->
+    <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+
+    <!-- Mensagem de sucesso sobreposta -->
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+
+    <!-- Scripts (mantenha os mesmos) -->
+    <script src="/src/main/resources/static/assets/JS/error.js"></script>
+    <script src="/src/main/resources/static/assets/JS/success.js"></script>
+    <script src="/src/main/resources/static/assets/JS/title.js"></script>
+    <script src="/src/main/resources/static/assets/JS/auth.js"></script>
+    <script src="/src/main/resources/static/assets/JS/logout.js"></script>
+    <script src="/src/main/resources/static/assets/JS/vincular.js"></script>
+    <script src="/src/main/resources/static/assets/JS/menu.js"></script>
+    <script src="/src/main/resources/static/assets/JS/auth.js"></script>
+</body>
+</html>

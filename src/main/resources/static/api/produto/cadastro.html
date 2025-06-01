@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="icon" type="image/x-icon" href="/src/main/resources/static/assets/fotos/ICON.ico">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/cadastro_produtos.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/global.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/calendar.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/error.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/sucess.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/menu.css">
+    <link rel="stylesheet" href="/src/main/resources/static/assets/css/logout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Botão de Logoff -->
+    <button id="logoutButton" class="logout-button">Sair</button>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <header>
+            <h2 id="title" class="typing-effect" data-text="Cadastro de Produto"></h2>
+        </header>
+
+        <!-- Formulário de Cadastro -->
+        <section class="form-container">
+            <form id="produtoForm">
+                <div class="form-group">
+                    <label for="nomeProduto">Nome do Produto:</label>
+                    <input type="text" id="nomeProduto" placeholder="Nome do Produto" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="descricaoProduto">Descrição:</label>
+                    <textarea id="descricaoProduto" placeholder="Descrição do Produto" required autocomplete="off"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="codBarras">Código de Barras:</label>
+                    <input type="text" id="codBarras" placeholder="Código de barras" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="dataValidade">Data de Validade:</label>
+                    <div class="date-picker">
+                        <input type="text" id="dataValidade" placeholder="DD/MM/AAAA" required autocomplete="off">
+                        <img src="/src/main/resources/static/assets/fotos/svg/calendar.svg" alt="Calendário" class="calendar-icon">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantidadeContada">Quantidade:</label>
+                    <input type="text" id="quantidadeContada" required autocomplete="off" placeholder="Ex: 10 ou 10.5">
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="btn-primary">Cadastrar</button>
+                </div>
+            </form>
+            
+            <p id="mensagem"></p>
+        </section>
+    </main>
+    
+    <!-- Mensagem de erro sobreposta -->
+    <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+    
+    <!-- Mensagem de sucesso sobreposta -->
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js/dist/cleave.min.js"></script>
+    <script src="/src/main/resources/static/assets/JS/calendar.js"></script>
+    <script src="/src/main/resources/static/assets/JS/error.js"></script>
+    <script src="/src/main/resources/static/assets/JS/sucess.js"></script>
+    <script src="/src/main/resources/static/assets/JS/cadastro_produtos.js"></script>
+    <script src="/src/main/resources/static/assets/JS/title.js"></script>
+    <script src="/src/main/resources/static/assets/JS/auth.js"></script>
+    <script src="/src/main/resources/static/assets/JS/logout.js"></script>
+    <script src="/src/main/resources/static/assets/JS/menu.js"></script>
+</body>
+</html>

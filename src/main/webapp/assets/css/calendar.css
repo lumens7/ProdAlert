@@ -1,0 +1,69 @@
+.date-picker {
+    position: relative;
+    width: 100%;
+    z-index: 1000; 
+    overflow: visible; 
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#dataValidade {
+    padding-right: 40px;
+}
+
+.flatpickr-calendar {
+    width: 320px; 
+    font-size: 14px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+    z-index: 9999; 
+}
+
+.flatpickr-months {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9; 
+    border-bottom: 1px solid #ddd; 
+    z-index: 10000; 
+}
+
+.flatpickr-monthDropdown-months,
+.flatpickr-yearDropdown {
+    z-index: 10001; 
+    background-color:  var(--background); 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    padding: 5px; 
+    cursor: pointer; 
+}
+
+.flatpickr-monthDropdown-months:hover,
+.flatpickr-yearDropdown:hover {
+    background-color: #f0f0f0;
+}
+
+.flatpickr-day {
+    height: 36px; 
+    line-height: 36px; 
+}
+
+.flatpickr-day.selected {
+    background-color: var(--background);
+    border-color:  var(--background);
+}
+
+.flatpickr-day.today {
+    border-color:  var(--background); 
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincular Funcionário</title>
+    <link rel="icon" type="image/x-icon" href="/assets/fotos/ICON.ico">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/vincular.css">
+    <link rel="stylesheet" href="/assets/css/error.css">
+    <link rel="stylesheet" href="/assets/css/sucess.css">
+    <link rel="stylesheet" href="/assets/css/logout.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+<body>
+    <button id="logoutButton" class="logout-button">Sair</button>
+
+    <div class="container">
+        <h2 id="title" class="typing-effect" data-text="Vincular Funcionário"></h2>
+        <form id="vincularForm">
+            <label for="CPF">CPF do Funcionário:</label>
+            <input type="text" id="CPF" required autocomplete="off" placeholder="Digite o CPF do funcionário">
+            <button type="submit" class="btn-buscar">Buscar Funcionário</button>
+        </form>
+    </div>
+
+    <div id="confirmOverlay" class="overlay" style="display: none;">
+        <div class="message-box">
+            <div class="close">
+                <button id="closeConfirmButton" class="close-button">X</button>
+            </div>
+            <span id="confirmMessage"></span>
+            <div id="dadosFuncionario" class="dados-funcionario"></div>
+            <div class="confirm-buttons">
+                <button id="confirmAction" class="btn-confirm">Confirmar</button>
+                <button id="cancelAction" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+
+    <script src="/assets/JS/error.js"></script>
+    <script src="/assets/JS/sucess.js"></script>
+    <script src="/assets/JS/title.js"></script>
+    <script src="/assets/JS/auth.js"></script>
+    <script src="/assets/JS/logout.js"></script>
+    <script src="/assets/JS/vincular.js"></script>
+    <script src="/assets/JS/menu.js"></script>
+</body>
+</html>

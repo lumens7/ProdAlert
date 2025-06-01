@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none;
+}
+
+.logo {
+    height: 7rem; 
+    width: auto;
+    margin-bottom: 0; 
+}
+
+.containerLogar {
+    color: var(--text2);
+    background: var(--terceira);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex: 1;
+    max-height: 80vh;
+    max-width: 80vw;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px var(--background);
+}
+
+.apresentacao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    background-color: var(--quarta);
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 0 .5rem;
+    height: 100%;
+}
+
+.apresentacao h1 {
+    font-size: 2rem;
+    text-align: start;
+    padding: 0 3rem;
+}
+
+.apresentacao p {
+    text-align: start;
+    padding: 0 3rem;
+    font-size: 1.5rem;
+}
+
+.logar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .5rem 1rem;
+    height: 100%;
+    width: 50%;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    padding: 0;
+    width: 100%;
+    text-align: left; 
+    
+}
+
+input, button {
+    width: 100%;
+    padding: .5rem;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2rem;
+}
+
+button {
+    background-color: var(--background);
+    color: var(--text);
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--quarta);
+    color: var(--text2);
+    transition: .5s;
+}
+
+.cadastro {
+    color: var(--background);
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.cadastro:hover {
+    color: var(--quarta);
+    transition: .5s;
+}
+
+#errorMessage {
+    color: red;
+    display: none;
+    margin-top: 1rem;
+}
+#loginForm a{
+    margin-top: .5rem;
+    color: var(--background);
+    text-decoration: none;
+}
+#loginForm a:hover{
+    text-decoration: underline;
+}

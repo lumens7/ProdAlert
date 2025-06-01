@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Usuários</title>
+    <link rel="icon" type="image/x-icon" href="/assets/fotos/ICON.ico">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/pesquisa_user.css">
+    <link rel="stylesheet" href="/assets/css/sucess.css">
+    <link rel="stylesheet" href="/assets/css/error.css">
+    <link rel="stylesheet" href="/assets/css/logout.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+<body>
+    <button id="logout-Button" class="logout-button">Sair</button>
+
+    <main class="container">
+        <header>
+            <h2 id="title" class="typing-effect" data-text="Pesquisa de Usuários"></h2>
+        </header>
+
+        <section class="search-bar">
+            <div class="form-group">
+                <label for="nomeUsuario">Nome do Usuário:</label>
+                <input type="text" id="nomeUsuario" placeholder="Nome do Usuário" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="emailUsuario">E-mail:</label>
+                <input type="email" id="emailUsuario" placeholder="E-mail do Usuário" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="cpfUsuario">CPF:</label>
+                <input type="text" id="cpfUsuario" placeholder="CPF do Usuário" autocomplete="off">
+            </div>
+
+            <div class="button-container">
+                <button id="btnPesquisar" class="btn-primary">Pesquisar</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="errorOverlay" class="error-overlay" style="display: none;">
+        <div class="error-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeErrorButton" class="close-button">X</button>
+            </div>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+
+    <div id="successOverlay" class="success-overlay" style="display: none;">
+        <div class="success-box">
+            <div class="close">
+                <div class="espaço"></div>
+                <button id="closeSuccessButton" class="close-button">X</button>
+            </div>
+            <span id="successMessage"></span>
+            <p id="countdownTimer"></p>
+        </div>
+    </div>
+
+    <script src="/assets/JS/pesquisa_user.js"></script>
+    <script src="/assets/JS/sucess.js"></script>
+    <script src="/assets/JS/error.js"></script>
+    <script src="/assets/JS/title.js"></script>
+    <script src="/assets/JS/auth.js"></script>
+    <script src="/assets/JS/logout.js"></script>
+    <script src="/assets/JS/menu.js"></script>
+</body>
+</html>

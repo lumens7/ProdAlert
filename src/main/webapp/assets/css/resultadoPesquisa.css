@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none;
+}
+.tabela-wrapper {
+    width: 100%;
+}
+
+#resultadosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin: 1rem 0;
+    background-color: var(--terceira);
+    color: var(--text2);
+}
+
+#resultadosTable th, #resultadosTable td {
+    padding: .5rem 1rem; 
+    text-align: left;
+    border-right: none; 
+}
+
+#resultadosTable th {
+    background-color: var(--secundaria); 
+    color: var(--text2);
+    font-weight: bold;
+    text-transform: uppercase; 
+    border-bottom: 2px solid var(--background); 
+    cursor: pointer;
+}
+
+#resultadosTable td {
+    border-bottom: 1px solid var(--background); 
+}
+
+#resultadosTable tr:last-child td {
+    border-bottom: none; 
+}
+
+#resultadosTable tr:hover {
+    background-color: rgba(82,183,136, 0.7);
+}
+
+.export-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.export-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    border-radius: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--background);
+}
+
+.export-button img {
+    width: 24px;
+    height: 24px;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        height: auto;
+    }
+
+    #title {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .export-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .export-button {
+        width: 100%;
+        justify-content: center;
+    }
+    .tabela-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    #resultadosTable{
+        overflow-x: auto;
+    }
+    #resultadosTable th, #resultadosTable td {
+        font-size: 0.8rem;
+    }
+
+    .logout-button {
+        position: static;
+        margin-top: 1rem;
+    }
+}
